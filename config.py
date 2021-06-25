@@ -1,21 +1,21 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class BaseResponse(BaseModel):
-    code: int
-    type: str
-    message: str
+    code: int = Field(...)
+    type: str = Field(...)
+    message: str = Field(...)
 
 
 class User(BaseModel):
-    id: int = None
-    username: str
-    firstName: str
-    lastName: str
-    email: str
-    password: str
-    phone: str
-    userStatus: int
+    id: int = Field(None)
+    username: str = Field(...)
+    firstName: str = Field(...)
+    lastName: str = Field(...)
+    email: str = Field(...)
+    password: str = Field(...)
+    phone: str = Field(...)
+    userStatus: int = Field(...)
 
 
 class Urls:
